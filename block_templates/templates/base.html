@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Website</title>
+</head>
+<body>
+    <nav style="background: green; padding: 10px; border-radius: 10px">
+        <a style="color: white;" href="/home">Home</a>
+        <a style="color: white;" href="/contact">Contact</a>
+        <p>This navbar is on every page</p>
+    </nav>
+    {% block content %}
+        replace me
+    {% endblock %}
+    {% block another_content_block %}
+        replace me
+    {% endblock %}
+</body>
+</html>
