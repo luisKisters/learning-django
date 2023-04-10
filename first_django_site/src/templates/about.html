@@ -7,6 +7,19 @@
         {{ my_text }}, {{ my_number }}, {{ my_list }}
     </p>
     {% for my_sub_item in my_list %}
-        <li>{{ forloop.counter }} - {{ my_sub_item }}</li>
+        {% if boolean == True %}
+            <li>{{ forloop.counter }} - {{ my_sub_item|add:22 }}</li>
+        {% endif %}
+        <!-- <li>{{ forloop.counter }} - {{ my_sub_item }}</li> -->
+        {% if my_sub_item == 34 %}
+            <li>{{ forloop.counter }} - {{ my_sub_item|add:6 }}</li>
+        {% endif %}
+        {% if my_sub_item == 34 %}  
+            <li>The item before this item is 34 + 6</li>
+        {% endif %}
     {% endfor %}
+    <p>This text is uppercase: {{ my_text|upper }}</p>
+    <p>This text has the first letter capitalized: {{ my_text|capfirst }}</p>
+    <p>This h1 down below is saved as plain text but gets rendered as html because of a template tag filter</p>
+    {{ my_html|safe }}
 {% endblock %}

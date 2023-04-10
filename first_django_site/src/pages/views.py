@@ -15,10 +15,11 @@ def about_view(request, *args, **kwargs):
         "my_text": "this is some text about us",
         "my_number": 123,
         "boolean": True,
-        "my_list": [13,34,631,6424]
+        "my_list": [13,34,631,6424],
+        "my_html": "<h1>Hello World</h1>",
     }
     return render(request, "about.html", my_context)
 
 def social_view(request, *args, **kwargs):
-    # return render(request, "social.html", {})
+    # return render(request, "social.html", {f})
     return HttpResponse("<h1>Social Page</h1>")
