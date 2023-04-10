@@ -11,7 +11,13 @@ def contact_view(request, *args, **kwargs):
     return render(request, "contact.html", {})
 
 def about_view(request, *args, **kwargs):
-    return render(request, "about.html", {})
+    my_context = {
+        "my_text": "this is some text about us",
+        "my_number": 123,
+        "boolean": True,
+        "my_list": [13,34,631,6424]
+    }
+    return render(request, "about.html", my_context)
 
 def social_view(request, *args, **kwargs):
     # return render(request, "social.html", {})

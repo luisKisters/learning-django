@@ -7,12 +7,10 @@
     <title>Test Title</title>
 </head>
 <body>
+    {% include 'navbar.html' %}
     {% block content %}
         replace me
     {% endblock %}
-
-    {% block another_content_block %}
-        replace me (this is another_content_block)
-    {% endblock %}
+    
 </body>
 </html>
