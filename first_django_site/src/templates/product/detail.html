@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
+    <h1>{{ object.title }}</h1>
     <p>Description: 
-        {% if != description %}
-            {{ description }}
+        {% if object.description != None and object.description != '' %}
+            {{ object.description }}
         {% else %}
             Coming soon
         {% endif %}
     </p>
+    <p>Price {{ object.price }}</p>
+    {% if object.summary != None and object.summary != '' %}
+        <p>Summary: {{ object.summary }}</p>
+    {% endif %}
 {% endblock %}
